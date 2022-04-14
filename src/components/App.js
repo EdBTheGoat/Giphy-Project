@@ -10,7 +10,6 @@ class App extends React.Component {
 
 	async componentDidMount() {
 		const response = await trending.get('');
-		console.log(response.data.data);
 		this.setState({ images: response.data.data });
 	}
 
@@ -18,7 +17,6 @@ class App extends React.Component {
 		const response = await search.get('', {
 			params: { q: term },
 		});
-		console.log(response.data.data);
 		this.setState({ images: response.data.data });
 	};
 
